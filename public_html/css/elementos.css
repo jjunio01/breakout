@@ -24,3 +24,93 @@ and open the template in the editor.
     right: 45%;
     position: absolute;
 }
+#bola{
+    border-radius: 100%;
+    background: #112222;
+    width: 50px;
+    height: 50px;
+    top:45%;
+    right: 45%;
+    position: absolute;
+}
+
+#bloco1{
+    width: 70px;
+    height: 20px;
+    background: #991133;
+    top:0%;
+    right: 90%;
+    position: absolute;
+}
+#bloco2{
+    width: 70px;
+    height: 20px;
+    background: #001122;
+    top:0%;
+    right: 80%;
+    position: absolute;
+}
+#bloco3{
+    width: 70px;
+    height: 20px;
+    background: #883399;
+    top:0%;
+    right: 70%;
+    position: absolute;
+}
+#bloco4{
+    width: 70px;
+    height: 20px;
+    background: #229900;
+    top:0%;
+    right: 60%;
+    position: absolute;
+}
+#bloco5{
+    width: 70px;
+    height: 20px;
+    background: #110099;
+    top:0%;
+    right: 50%;
+    position: absolute;
+}
+#bloco6{
+    width: 70px;
+    height: 20px;
+    background: #001122;
+    top:0%;
+    right: 40%;
+    position: absolute;
+}
+#bloco7{
+    width: 70px;
+    height: 20px;
+    background: #991133;
+    top:0%;
+    right: 30%;
+    position: absolute;
+}
+#bloco8{
+    width: 70px;
+    height: 20px;
+    background: #224455;
+    top:0%;
+    right: 20%;
+    position: absolute;
+}
+#bloco9{
+    width: 70px;
+    height: 20px;
+    background: #445509;
+    top:0%;
+    right: 10%;
+    position: absolute;
+}
+#bloco10{
+    width: 70px;
+    height: 20px;
+    background: #901122;
+    top:0%;
+    right: 0%;
+    position: absolute;
+}
