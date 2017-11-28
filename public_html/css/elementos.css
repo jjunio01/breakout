@@ -34,7 +34,7 @@ and open the template in the editor.
     position: absolute;
 }
 
-#bloco1{
+#bloco11{
     width: 70px;
     height: 20px;
     background: #991133;
@@ -42,7 +42,7 @@ and open the template in the editor.
     right: 90%;
     position: absolute;
 }
-#bloco2{
+#bloco12{
     width: 70px;
     height: 20px;
     background: #001122;
@@ -50,7 +50,7 @@ and open the template in the editor.
     right: 80%;
     position: absolute;
 }
-#bloco3{
+#bloco13{
     width: 70px;
     height: 20px;
     background: #883399;
@@ -58,7 +58,7 @@ and open the template in the editor.
     right: 70%;
     position: absolute;
 }
-#bloco4{
+#bloco14{
     width: 70px;
     height: 20px;
     background: #229900;
@@ -66,7 +66,7 @@ and open the template in the editor.
     right: 60%;
     position: absolute;
 }
-#bloco5{
+#bloco15{
     width: 70px;
     height: 20px;
     background: #110099;
@@ -74,7 +74,7 @@ and open the template in the editor.
     right: 50%;
     position: absolute;
 }
-#bloco6{
+#bloco16{
     width: 70px;
     height: 20px;
     background: #001122;
@@ -82,7 +82,7 @@ and open the template in the editor.
     right: 40%;
     position: absolute;
 }
-#bloco7{
+#bloco17{
     width: 70px;
     height: 20px;
     background: #991133;
@@ -90,7 +90,7 @@ and open the template in the editor.
     right: 30%;
     position: absolute;
 }
-#bloco8{
+#bloco18{
     width: 70px;
     height: 20px;
     background: #224455;
@@ -98,7 +98,7 @@ and open the template in the editor.
     right: 20%;
     position: absolute;
 }
-#bloco9{
+#bloco19{
     width: 70px;
     height: 20px;
     background: #445509;
@@ -106,7 +106,7 @@ and open the template in the editor.
     right: 10%;
     position: absolute;
 }
-#bloco10{
+#bloco110{
     width: 70px;
     height: 20px;
     background: #901122;
