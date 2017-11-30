@@ -18,6 +18,10 @@ and open the template in the editor.
                 $("#plataforma").draggable({axis: 'x', containment: '#container'});
             });
 
+            var posiLetf = 432;
+            var posiTop = 683;
+
+
             $(function () {
                 $('#bloco11').css("right", "90%");
                 $('#bloco12').css("right", "80%");
@@ -56,11 +60,21 @@ and open the template in the editor.
             });
 
             $(function () {
-                window.alert($('#bola').css("top").substring(0, ($('#bola').css("top").length - 2)));
-                window.alert($('#bola').css("left").substring(0, ($('#bola').css("top").length - 2)));
+                posiTop = $('#bola').offset().top;
+                posiLetf = $('#bola').offset().left;
+
             });
 
 
+            setInterval(function movimentaBola() {
+
+                $(function () {
+                    posiTop -= 2;
+                    posiLetf += -7;
+                    $('#bola').css("top", posiTop);
+                    $('#bola').css("left", posiLetf);
+                });
+            }, 400);
 
 
         </script>

@@ -21,7 +21,7 @@ and open the template in the editor.
     height: 20px;
     background: #006666;
     top:90%;
-    right: 45%;
+    right: 40%;
     position: absolute;
 }
 #bola{
@@ -31,6 +31,7 @@ and open the template in the editor.
     height: 30px;
     top:45%;
     right: 45%;
+
     position: absolute;
 }
 
