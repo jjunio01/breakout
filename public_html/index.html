@@ -17,6 +17,7 @@ and open the template in the editor.
             $(function () {
                 $("#plataforma").draggable({axis: 'x', containment: '#container'});
             });
+
             $(function () {
                 $('#bloco11').css("right", "90%");
                 $('#bloco12').css("right", "80%");
@@ -53,6 +54,13 @@ and open the template in the editor.
                 $('#bloco39').css("right", "10%");
                 $('#bloco310').css("right", "0%");
             });
+
+            $(function () {
+                window.alert($('#bola').css("top").substring(0, ($('#bola').css("top").length - 2)));
+                window.alert($('#bola').css("left").substring(0, ($('#bola').css("top").length - 2)));
+            });
+
+
 
 
         </script>
