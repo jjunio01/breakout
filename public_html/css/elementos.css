@@ -34,83 +34,27 @@ and open the template in the editor.
     position: absolute;
 }
 
-#bloco11{
-    width: 70px;
-    height: 20px;
-    background: #991133;
-    top:0%;
-    right: 90%;
-    position: absolute;
-}
-#bloco12{
-    width: 70px;
-    height: 20px;
-    background: #001122;
-    top:0%;
-    right: 80%;
-    position: absolute;
-}
-#bloco13{
-    width: 70px;
-    height: 20px;
-    background: #883399;
-    top:0%;
-    right: 70%;
-    position: absolute;
-}
-#bloco14{
+.bloco{
     width: 70px;
     height: 20px;
     background: #229900;
     top:0%;
-    right: 60%;
+    right: 90%;
     position: absolute;
 }
-#bloco15{
+.bloco2{
     width: 70px;
     height: 20px;
-    background: #110099;
-    top:0%;
-    right: 50%;
+    background: #229900;
+    top:5%;
+    right: 90%;
     position: absolute;
 }
-#bloco16{
+.bloco3{
     width: 70px;
     height: 20px;
-    background: #001122;
-    top:0%;
-    right: 40%;
-    position: absolute;
-}
-#bloco17{
-    width: 70px;
-    height: 20px;
-    background: #991133;
-    top:0%;
-    right: 30%;
-    position: absolute;
-}
-#bloco18{
-    width: 70px;
-    height: 20px;
-    background: #224455;
-    top:0%;
-    right: 20%;
-    position: absolute;
-}
-#bloco19{
-    width: 70px;
-    height: 20px;
-    background: #445509;
-    top:0%;
-    right: 10%;
-    position: absolute;
-}
-#bloco110{
-    width: 70px;
-    height: 20px;
-    background: #901122;
-    top:0%;
-    right: 0%;
+    background: #229900;
+    top:10%;
+    right: 90%;
     position: absolute;
 }
