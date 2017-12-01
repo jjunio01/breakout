@@ -66,7 +66,7 @@ and open the template in the editor.
                     var plataforma = $("#plataforma");
                     //verifica colisão em baixo
                     if(bola.position().top+bola.height() >= container.height()){
-                        top = -1;
+                        clearInterval(movimento)
                     }
                     //verifica colisão na borda direita
                     if(bola.position().left+bola.width() >= container.width()){
@@ -87,7 +87,7 @@ and open the template in the editor.
                     }
                 }
 
-                setInterval(movimentaBola, 1);
+                var movimento = setInterval(movimentaBola, 1);
 
                 colorirPosicionarBlocos()
 
