@@ -53,38 +53,57 @@ and open the template in the editor.
                     $('#bloco310').css({"right":"0%", "background-color":"#965825", "top":"10%"});
                 }
 
-                var top = 1;
-                var left = 1;
+                var top = -10;
+                var left = 10;
+                var container = $("#container");
+                var bola = $("#bola");
+                var plataforma = $("#plataforma");
+                var blocos = $(".bloco");
                 function movimentaBola(){
-                    $("p").html($("#plataforma").position().left);
                     posiTop += top;
                     posiLetf += left;
                     $('#bola').css("top", posiTop);
                     $('#bola').css("left", posiLetf);
-                    var container = $("#container");
-                    var bola = $("#bola");
-                    var plataforma = $("#plataforma");
                     //verifica colisão em baixo
                     if(bola.position().top+bola.height() >= container.height()){
                         clearInterval(movimento)
                     }
                     //verifica colisão na borda direita
-                    if(bola.position().left+bola.width() >= container.width()){
-                        left = -1;
+                    else if(bola.position().left+bola.width() >= container.width()){
+                        left = -10;
                     }
                     //verifica colisão em cima
-                    if(bola.offset().top <= container.offset().top){
-                        top = 1;
+                    else if(bola.offset().top <= container.offset().top){
+                        top = 10;
                     }
                     //verifica colisão na borda esquerda
-                    if(bola.offset().left <= container.offset().left){
-                        left = 1;
+                    else if(bola.offset().left <= container.offset().left){
+                        left = 10;
                     }
                     //verifica colisão na plataforma
                     //verifica se a parte de baixo da bola está em contato com a parte de cima da plataforma e se a parte esquerda da bola(o certo seria o meio) está entre a parte esquerda e direita da plataforma
-                    if ((bola.position().top+bola.height() >= plataforma.position().top) && (bola.position().left <= plataforma.position().left || bola.position().left <= plataforma.position().left + plataforma.width())) {
-                        top = -1;
+                    else if ((bola.position().top+bola.height() >= plataforma.position().top) && (bola.position().left <= plataforma.position().left && bola.position().left >= plataforma.position().left + plataforma.width())) {
+                        top = -10;
                     }
+
+                    // for (var i = 1; i <= 3; i++) {
+                    //     for (var j = 1; j <= 10; j++) {
+                    //         var bloco = $("#bloco"+i+""+j);
+                    //         if(bola.position().top <= bloco.position().top + bloco.height()){
+                    //             top = 10;
+                    //             $("#bloco"+i+""+j).remove();
+                    //         }
+                    //     }
+                    // }
+
+                    // for (var i = 0; i < blocos.length; i++) {
+                    //     var bloco = $(blocos[i]);
+                    //     if(bola.position().top <= bloco.position().top + bloco.height()){
+                    //         top = 10;
+                    //         bloco.remove();
+                    //     }
+                    // }
+
                 }
 
                 var movimento = setInterval(movimentaBola, 1);
