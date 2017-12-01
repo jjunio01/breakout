@@ -57,27 +57,34 @@ and open the template in the editor.
                 var top = 1;
                 var left = 1;
                 function movimentaBola(){
+                    $("p").html($("#plataforma").position().left);
                     posiTop += top;
                     posiLetf += left;
                     $('#bola').css("top", posiTop);
                     $('#bola').css("left", posiLetf);
                     var container = $("#container");
                     var bola = $("#bola");
+                    var plataforma = $("#plataforma");
                     //verifica colisão em baixo
-                    if(bola.position().top+bola.height()>=container.height()){
+                    if(bola.position().top+bola.height() >= container.height()){
                         top = -1;
                     }
                     //verifica colisão na borda direita
-                    if(bola.position().left+bola.width()>=container.width()){
+                    if(bola.position().left+bola.width() >= container.width()){
                         left = -1;
                     }
                     //verifica colisão em cima
-                    if(bola.offset().top<=container.offset().top){
+                    if(bola.offset().top <= container.offset().top){
                         top = 1;
                     }
                     //verifica colisão na borda esquerda
-                    if(bola.offset().left<=container.offset().left){
+                    if(bola.offset().left <= container.offset().left){
                         left = 1;
+                    }
+                    //verifica colisão na plataforma
+                    //verifica se a parte de baixo da bola está em contato com a parte de cima da plataforma e se a parte esquerda da bola(o certo seria o meio) está entre a parte esquerda e direita da plataforma
+                    if ((bola.position().top+bola.height() >= plataforma.position().top) && (bola.position().left <= plataforma.position().left || bola.position().left <= plataforma.position().left + plataforma.width())) {
+                        top = -1;
                     }
                 }
 
