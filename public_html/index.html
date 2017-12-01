@@ -16,58 +16,56 @@ and open the template in the editor.
         <script>
             $(function () {
                 $("#plataforma").draggable({axis: 'x', containment: '#container'});
-            });
 
-            var posiLetf;
-            var posiTop;
+                var posiLetf = $('#bola').position().left;
+                var posiTop = $('#bola').position().top;
 
-            $(function () {
-                $('#bloco11').css({"right":"90%", "background-color":"#654245"});
-                $('#bloco12').css({"right":"80%", "background-color": "#512469"});
-                $('#bloco13').css({"right":"70%", "background-color": "#4521365"});
-                $('#bloco14').css({"right":"60%", "background-color": "#154214"});
-                $('#bloco15').css({"right":"50%", "background-color": "#256134"});
-                $('#bloco16').css({"right":"40%", "background-color": "#154278"});
-                $('#bloco17').css({"right":"30%", "background-color": "#123695"});
-                $('#bloco18').css({"right":"20%", "background-color": "#778459"});
-                $('#bloco19').css({"right":"10%", "background-color": "#457865"});
-                $('#bloco110').css({"right":"0%", "background-color": "#258475"});
-                $('#bloco21').css({"right":"90%", "background-color": "#784569"});
-                $('#bloco21').css({"right":"90%", "background-color": "#451256"});
-                $('#bloco22').css({"right":"80%", "background-color": "#985467"});
-                $('#bloco23').css({"right":"70%", "background-color": "#135248"});
-                $('#bloco24').css({"right":"60%", "background-color": "#487578"});
-                $('#bloco25').css({"right":"50%", "background-color": "#665985"});
-                $('#bloco26').css({"right":"40%", "background-color": "#235255"});
-                $('#bloco27').css({"right":"30%", "background-color": "#203500"});
-                $('#bloco28').css({"right":"20%", "background-color": "#021548"});
-                $('#bloco29').css({"right":"10%", "background-color": "#458545"});
-                $('#bloco210').css({"right":"0%", "background-color": "#521458"});
-                $('#bloco31').css({"right":"90%", "background-color": "#514201"});
-                $('#bloco32').css({"right":"80%", "background-color": "#421521"});
-                $('#bloco33').css({"right":"70%", "background-color": "#102154"});
-                $('#bloco34').css({"right":"60%", "background-color": "#021522"});
-                $('#bloco35').css({"right":"50%", "background-color": "#215365"});
-                $('#bloco36').css({"right":"40%", "background-color": "#124569"});
-                $('#bloco37').css({"right":"30%", "background-color": "#120320"});
-                $('#bloco38').css({"right":"20%", "background-color": "#784596"});
-                $('#bloco39').css({"right":"10%", "background-color": "#458784"});
-                $('#bloco310').css({"right":"0%", "background-color": "#965825"});
-            });
+                function colorirPosicionarBlocos() {
+                    $('#bloco11').css({"right":"90%", "background-color": "#654245"});
+                    $('#bloco12').css({"right":"80%", "background-color": "#512469"});
+                    $('#bloco13').css({"right":"70%", "background-color": "#452135"});
+                    $('#bloco14').css({"right":"60%", "background-color": "#154214"});
+                    $('#bloco15').css({"right":"50%", "background-color": "#256134"});
+                    $('#bloco16').css({"right":"40%", "background-color": "#154278"});
+                    $('#bloco17').css({"right":"30%", "background-color": "#123695"});
+                    $('#bloco18').css({"right":"20%", "background-color": "#778459"});
+                    $('#bloco19').css({"right":"10%", "background-color": "#457865"});
+                    $('#bloco110').css({"right":"0%", "background-color": "#258475"});
+                    $('#bloco21').css({"right":"90%", "background-color": "#784569"});
+                    $('#bloco21').css({"right":"90%", "background-color": "#451256"});
+                    $('#bloco22').css({"right":"80%", "background-color": "#985467"});
+                    $('#bloco23').css({"right":"70%", "background-color": "#135248"});
+                    $('#bloco24').css({"right":"60%", "background-color": "#487578"});
+                    $('#bloco25').css({"right":"50%", "background-color": "#665985"});
+                    $('#bloco26').css({"right":"40%", "background-color": "#235255"});
+                    $('#bloco27').css({"right":"30%", "background-color": "#203500"});
+                    $('#bloco28').css({"right":"20%", "background-color": "#021548"});
+                    $('#bloco29').css({"right":"10%", "background-color": "#458545"});
+                    $('#bloco210').css({"right":"0%", "background-color": "#521458"});
+                    $('#bloco31').css({"right":"90%", "background-color": "#514201"});
+                    $('#bloco32').css({"right":"80%", "background-color": "#421521"});
+                    $('#bloco33').css({"right":"70%", "background-color": "#102154"});
+                    $('#bloco34').css({"right":"60%", "background-color": "#021522"});
+                    $('#bloco35').css({"right":"50%", "background-color": "#215365"});
+                    $('#bloco36').css({"right":"40%", "background-color": "#124569"});
+                    $('#bloco37').css({"right":"30%", "background-color": "#120320"});
+                    $('#bloco38').css({"right":"20%", "background-color": "#784596"});
+                    $('#bloco39').css({"right":"10%", "background-color": "#458784"});
+                    $('#bloco310').css({"right":"0%", "background-color": "#965825"});
+                }
 
-            $(function () {
-                posiTop = $('#bola').position().top;
-                posiLetf = $('#bola').position().left;
-            });
-
-            setInterval(function movimentaBola(){
-                $(function () {
-                    posiTop += 10;
-                    posiLetf += 10;
+                function movimentaBola(){
+                    posiTop += 1;
+                    posiLetf += 1;
                     $('#bola').css("top", posiTop);
                     $('#bola').css("left", posiLetf);
-                });
-            }, 400);
+                }
+
+                setInterval(movimentaBola, 1);
+
+                colorirPosicionarBlocos()
+
+            });
         </script>
     </head>
     <body>
