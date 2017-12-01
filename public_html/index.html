@@ -54,11 +54,31 @@ and open the template in the editor.
                     $('#bloco310').css({"right":"0%", "background-color": "#965825"});
                 }
 
+                var top = 1;
+                var left = 1;
                 function movimentaBola(){
-                    posiTop += 1;
-                    posiLetf += 1;
+                    posiTop += top;
+                    posiLetf += left;
                     $('#bola').css("top", posiTop);
                     $('#bola').css("left", posiLetf);
+                    var container = $("#container");
+                    var bola = $("#bola");
+                    //verifica colisão em baixo
+                    if(bola.position().top+bola.height()>=container.height()){
+                        top = -1;
+                    }
+                    //verifica colisão na borda direita
+                    if(bola.position().left+bola.width()>=container.width()){
+                        left = -1;
+                    }
+                    //verifica colisão em cima
+                    if(bola.offset().top<=container.offset().top){
+                        top = 1;
+                    }
+                    //verifica colisão na borda esquerda
+                    if(bola.offset().left<=container.offset().left){
+                        left = 1;
+                    }
                 }
 
                 setInterval(movimentaBola, 1);
