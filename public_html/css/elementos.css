@@ -38,24 +38,18 @@ and open the template in the editor.
 .bloco{
     width: 70px;
     height: 20px;
-    background: blue;
     top:0%;
-    right: 90%;
     position: absolute;
 }
 .bloco2{
     width: 70px;
     height: 20px;
-    background: red;
     top:5%;
-    right: 90%;
     position: absolute;
 }
 .bloco3{
     width: 70px;
     height: 20px;
-    background: yellow;
     top:10%;
-    right: 90%;
     position: absolute;
 }
