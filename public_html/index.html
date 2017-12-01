@@ -18,65 +18,56 @@ and open the template in the editor.
                 $("#plataforma").draggable({axis: 'x', containment: '#container'});
             });
 
-            var posiLetf = 432;
-            var posiTop = 683;
+            var posiLetf;
+            var posiTop;
 
-
             $(function () {
-                $('#bloco11').css("right", "90%");
-                $('#bloco12').css("right", "80%");
-                $('#bloco13').css("right", "70%");
-                $('#bloco14').css("right", "60%");
-                $('#bloco15').css("right", "50%");
-                $('#bloco16').css("right", "40%");
-                $('#bloco17').css("right", "30%");
-                $('#bloco18').css("right", "20%");
-                $('#bloco19').css("right", "10%");
-                $('#bloco110').css("right", "0%");
-            });
-            $(function () {
-                $('#bloco21').css("right", "90%");
-                $('#bloco22').css("right", "80%");
-                $('#bloco23').css("right", "70%");
-                $('#bloco24').css("right", "60%");
-                $('#bloco25').css("right", "50%");
-                $('#bloco26').css("right", "40%");
-                $('#bloco27').css("right", "30%");
-                $('#bloco28').css("right", "20%");
-                $('#bloco29').css("right", "10%");
-                $('#bloco210').css("right", "0%");
-            });
-            $(function () {
-                $('#bloco31').css("right", "90%");
-                $('#bloco32').css("right", "80%");
-                $('#bloco33').css("right", "70%");
-                $('#bloco34').css("right", "60%");
-                $('#bloco35').css("right", "50%");
-                $('#bloco36').css("right", "40%");
-                $('#bloco37').css("right", "30%");
-                $('#bloco38').css("right", "20%");
-                $('#bloco39').css("right", "10%");
-                $('#bloco310').css("right", "0%");
+                $('#bloco11').css({"right":"90%", "background-color":"#654245"});
+                $('#bloco12').css({"right":"80%", "background-color": "#512469"});
+                $('#bloco13').css({"right":"70%", "background-color": "#4521365"});
+                $('#bloco14').css({"right":"60%", "background-color": "#154214"});
+                $('#bloco15').css({"right":"50%", "background-color": "#256134"});
+                $('#bloco16').css({"right":"40%", "background-color": "#154278"});
+                $('#bloco17').css({"right":"30%", "background-color": "#123695"});
+                $('#bloco18').css({"right":"20%", "background-color": "#778459"});
+                $('#bloco19').css({"right":"10%", "background-color": "#457865"});
+                $('#bloco110').css({"right":"0%", "background-color": "#258475"});
+                $('#bloco21').css({"right":"90%", "background-color": "#784569"});
+                $('#bloco21').css({"right":"90%", "background-color": "#451256"});
+                $('#bloco22').css({"right":"80%", "background-color": "#985467"});
+                $('#bloco23').css({"right":"70%", "background-color": "#135248"});
+                $('#bloco24').css({"right":"60%", "background-color": "#487578"});
+                $('#bloco25').css({"right":"50%", "background-color": "#665985"});
+                $('#bloco26').css({"right":"40%", "background-color": "#235255"});
+                $('#bloco27').css({"right":"30%", "background-color": "#203500"});
+                $('#bloco28').css({"right":"20%", "background-color": "#021548"});
+                $('#bloco29').css({"right":"10%", "background-color": "#458545"});
+                $('#bloco210').css({"right":"0%", "background-color": "#521458"});
+                $('#bloco31').css({"right":"90%", "background-color": "#514201"});
+                $('#bloco32').css({"right":"80%", "background-color": "#421521"});
+                $('#bloco33').css({"right":"70%", "background-color": "#102154"});
+                $('#bloco34').css({"right":"60%", "background-color": "#021522"});
+                $('#bloco35').css({"right":"50%", "background-color": "#215365"});
+                $('#bloco36').css({"right":"40%", "background-color": "#124569"});
+                $('#bloco37').css({"right":"30%", "background-color": "#120320"});
+                $('#bloco38').css({"right":"20%", "background-color": "#784596"});
+                $('#bloco39').css({"right":"10%", "background-color": "#458784"});
+                $('#bloco310').css({"right":"0%", "background-color": "#965825"});
             });
 
             $(function () {
-                posiTop = $('#bola').offset().top;
-                posiLetf = $('#bola').offset().left;
-
+                posiTop = $('#bola').position().top;
+                posiLetf = $('#bola').position().left;
             });
 
-
-            setInterval(function movimentaBola() {
-
+            setInterval(function movimentaBola(){
                 $(function () {
-                    posiTop -= 2;
-                    posiLetf += -7;
+                    posiTop += 10;
+                    posiLetf += 10;
                     $('#bola').css("top", posiTop);
                     $('#bola').css("left", posiLetf);
                 });
             }, 400);
-
-
         </script>
     </head>
     <body>
@@ -86,7 +77,7 @@ and open the template in the editor.
             <table>
                 <tr>
                     <td><div class="bloco" id="bloco11"> </div> </td>
-                    <td><div class="bloco"  id="bloco12"> </div> </td>
+                    <td><div class="bloco" id="bloco12"> </div> </td>
                     <td><div class="bloco" id="bloco13"> </div> </td>
                     <td><div class="bloco" id="bloco14"> </div> </td>
                     <td><div class="bloco" id="bloco15"> </div> </td>
