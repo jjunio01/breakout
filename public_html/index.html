@@ -82,7 +82,7 @@ and open the template in the editor.
                     }
                     //verifica colisão na plataforma
                     //verifica se a parte de baixo da bola está em contato com a parte de cima da plataforma e se a parte esquerda da bola(o certo seria o meio) está entre a parte esquerda e direita da plataforma
-                    else if ((bola.position().top+bola.height() >= plataforma.position().top) && (bola.position().left <= plataforma.position().left && bola.position().left >= plataforma.position().left + plataforma.width())) {
+                    else if ((bola.position().top+bola.height() >= plataforma.position().top) && (bola.position().left >= plataforma.position().left && bola.position().left <= plataforma.position().left + plataforma.width())) {
                         top = -10;
                     }
 
