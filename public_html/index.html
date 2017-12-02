@@ -152,25 +152,36 @@ and open the template in the editor.
                     //         bloco.remove();
                     //     }
                     // }
+                    //&& (bola.position().left + (bola.position().width)) <= posicoes[i][1]
                     for (var i = 0; i < posicoes.length; i++) {
-                        if (bola.position().top <= posicoes[i][3]) {
+                        bolaAux = $('#bola');
+                        if (bolaAux.position().top <= posicoes[i][3] &&
+                                bolaAux.position().left >= posicoes[i][0]) {
                             destruirBloco(i);
                         }
                     }
                 }
 
+                // $("p").html($('#bola').position().left);
+
                 var movimento = setInterval(movimentaBola, 300);
 
                 colorirPosicionarBlocos();
+
 
             });
         </script>
     </head>
     <body>
+        <div>
+            <p></p>
+        </div>
         <div id="container">
+
             <div id="plataforma"> </div>
             <div id="bola">  </div>
             <table>
+
                 <tr>
                     <td><div class="bloco" id="bloco11"> </div> </td>
                     <td><div class="bloco" id="bloco12"> </div> </td>
