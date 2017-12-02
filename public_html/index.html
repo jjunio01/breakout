@@ -20,6 +20,7 @@ and open the template in the editor.
                 var posiLetf = $('#bola').position().left;
                 var posiTop = $('#bola').position().top;
                 var posicoes = [];
+                var aux = [];
 
 
                 function colorirPosicionarBlocos() {
@@ -84,11 +85,20 @@ and open the template in the editor.
                     $('#bloco310').css({"left": "90%", "background-color": "#965825", "top": "10%"});
                     criaPosicao($('#bloco310'));
                 }
+                aux = ['#bloco11', '#bloco12', '#bloco13', '#bloco14', '#bloco15', '#bloco16', '#bloco17', '#bloco18', '#bloco19', '#bloco110'
+                            , '#bloco21', '#bloco22', '#bloco23', '#bloco24', '#bloco25', '#bloco26', '#bloco27', '#bloco28', '#bloco29', '#bloco310'
+                            , '#bloco31', '#bloco32', '#bloco33', '#bloco34', '#bloco35', '#bloco36', '#bloco37', '#bloco37', '#bloco39', '#bloco310'];
 
                 function criaPosicao(valor) {
                     posicoes.push([valor.position().left, valor.position().left
                                 + valor.width(), valor.position().top,
                         valor.position().top + valor.height()]);
+                }
+
+                function destruirBloco(indice) {
+
+                    $(aux[indice]).css({"left": "70%", "top": "-10"});
+
                 }
 
 
@@ -142,7 +152,11 @@ and open the template in the editor.
                     //         bloco.remove();
                     //     }
                     // }
-
+                    for (var i = 0; i < posicoes.length; i++) {
+                        if (bola.position().top <= posicoes[i][3]) {
+                            destruirBloco(i);
+                        }
+                    }
                 }
 
                 var movimento = setInterval(movimentaBola, 300);
