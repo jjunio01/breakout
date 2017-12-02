@@ -16,13 +16,11 @@ and open the template in the editor.
         <script>
             $(function () {
                 $("#plataforma").draggable({axis: 'x', containment: '#container'});
-
                 var posiLetf = $('#bola').position().left;
                 var posiTop = $('#bola').position().top;
                 var posicoes = [];
+                var aux2 = [];
                 var aux = [];
-
-
                 function colorirPosicionarBlocos() {
                     $('#bloco11').css({"left": "0%", "background-color": "#000000", "top": "0%"});
                     criaPosicao($('#bloco11'));
@@ -88,19 +86,16 @@ and open the template in the editor.
                 aux = ['#bloco11', '#bloco12', '#bloco13', '#bloco14', '#bloco15', '#bloco16', '#bloco17', '#bloco18', '#bloco19', '#bloco110'
                             , '#bloco21', '#bloco22', '#bloco23', '#bloco24', '#bloco25', '#bloco26', '#bloco27', '#bloco28', '#bloco29', '#bloco310'
                             , '#bloco31', '#bloco32', '#bloco33', '#bloco34', '#bloco35', '#bloco36', '#bloco37', '#bloco37', '#bloco39', '#bloco310'];
-
                 function criaPosicao(valor) {
+                    aux2.push(valor);
                     posicoes.push([valor.position().left, valor.position().left
                                 + valor.width(), valor.position().top,
                         valor.position().top + valor.height()]);
                 }
-
                 function destruirBloco(indice) {
 
                     $(aux[indice]).css({"left": "70%", "top": "-10"});
-
                 }
-
 
                 var top = -10;
                 var left = 10;
@@ -155,20 +150,18 @@ and open the template in the editor.
                     //&& (bola.position().left + (bola.position().width)) <= posicoes[i][1]
                     for (var i = 0; i < posicoes.length; i++) {
                         bolaAux = $('#bola');
-                        if (bolaAux.position().top <= posicoes[i][3] &&
-                                bolaAux.position().left >= posicoes[i][0]) {
+                        if ((bolaAux.position().top + bolaAux.height() >= aux2[i].position().top)
+                                && (bolaAux.position().left >= aux2[i].position().left
+                                        && bolaAux.position().left <= aux2[i].position().left + aux2[i].width())) {
                             destruirBloco(i);
                         }
                     }
-                }
 
+                }
                 // $("p").html($('#bola').position().left);
 
-                var movimento = setInterval(movimentaBola, 300);
-
+                var movimento = setInterval(movimentaBola, 100);
                 colorirPosicionarBlocos();
-
-
             });
         </script>
     </head>
