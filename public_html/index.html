@@ -19,39 +19,78 @@ and open the template in the editor.
 
                 var posiLetf = $('#bola').position().left;
                 var posiTop = $('#bola').position().top;
+                var posicoes = [];
+
 
                 function colorirPosicionarBlocos() {
-                    $('#bloco11').css({"left":"0%", "background-color":"#000000", "top":"0%"});
-                    $('#bloco12').css({"left":"10%", "background-color":"#512469", "top":"0%"});
-                    $('#bloco13').css({"left":"20%", "background-color":"#452135", "top":"0%"});
-                    $('#bloco14').css({"left":"30%", "background-color":"#154214", "top":"0%"});
-                    $('#bloco15').css({"left":"40%", "background-color":"#256134", "top":"0%"});
-                    $('#bloco16').css({"left":"50%", "background-color":"#154278", "top":"0%"});
-                    $('#bloco17').css({"left":"60%", "background-color":"#123695", "top":"0%"});
-                    $('#bloco18').css({"left":"70%", "background-color":"#778459", "top":"0%"});
-                    $('#bloco19').css({"left":"80%", "background-color":"#457865", "top":"0%"});
-                    $('#bloco110').css({"left":"90%", "background-color":"#258475", "top":"0%"});
-                    $('#bloco21').css({"left":"0%", "background-color":"#784569", "top":"5%"});
-                    $('#bloco22').css({"left":"10%", "background-color":"#985467", "top":"5%"});
-                    $('#bloco23').css({"left":"20%", "background-color":"#135248", "top":"5%"});
-                    $('#bloco24').css({"left":"30%", "background-color":"#487578", "top":"5%"});
-                    $('#bloco25').css({"left":"40%", "background-color":"#665985", "top":"5%"});
-                    $('#bloco26').css({"left":"50%", "background-color":"#235255", "top":"5%"});
-                    $('#bloco27').css({"left":"60%", "background-color":"#203500", "top":"5%"});
-                    $('#bloco28').css({"left":"70%", "background-color":"#021548", "top":"5%"});
-                    $('#bloco29').css({"left":"80%", "background-color":"#458545", "top":"5%"});
-                    $('#bloco210').css({"left":"90%", "background-color":"#521458", "top":"5%"});
-                    $('#bloco31').css({"left":"0%", "background-color":"#514201", "top":"10%"});
-                    $('#bloco32').css({"left":"10%", "background-color":"#421521", "top":"10%"});
-                    $('#bloco33').css({"left":"20%", "background-color":"#102154", "top":"10%"});
-                    $('#bloco34').css({"left":"30%", "background-color":"#021522", "top":"10%"});
-                    $('#bloco35').css({"left":"40%", "background-color":"#215365", "top":"10%"});
-                    $('#bloco36').css({"left":"50%", "background-color":"#124569", "top":"10%"});
-                    $('#bloco37').css({"left":"60%", "background-color":"#120320", "top":"10%"});
-                    $('#bloco38').css({"left":"70%", "background-color":"#784596", "top":"10%"});
-                    $('#bloco39').css({"left":"80%", "background-color":"#458784", "top":"10%"});
-                    $('#bloco310').css({"left":"90%", "background-color":"#965825", "top":"10%"});
+                    $('#bloco11').css({"left": "0%", "background-color": "#000000", "top": "0%"});
+                    criaPosicao($('#bloco11'));
+                    $('#bloco12').css({"left": "10%", "background-color": "#512469", "top": "0%"});
+                    criaPosicao($('#bloco12'));
+                    $('#bloco13').css({"left": "20%", "background-color": "#452135", "top": "0%"});
+                    criaPosicao($('#bloco13'));
+                    $('#bloco14').css({"left": "30%", "background-color": "#154214", "top": "0%"});
+                    criaPosicao($('#bloco14'));
+                    $('#bloco15').css({"left": "40%", "background-color": "#256134", "top": "0%"});
+                    criaPosicao($('#bloco15'));
+                    $('#bloco16').css({"left": "50%", "background-color": "#154278", "top": "0%"});
+                    criaPosicao($('#bloco16'));
+                    $('#bloco17').css({"left": "60%", "background-color": "#123695", "top": "0%"});
+                    criaPosicao($('#bloco17'));
+                    $('#bloco18').css({"left": "70%", "background-color": "#778459", "top": "0%"});
+                    criaPosicao($('#bloco18'));
+                    $('#bloco19').css({"left": "80%", "background-color": "#457865", "top": "0%"});
+                    criaPosicao($('#bloco19'));
+                    $('#bloco110').css({"left": "90%", "background-color": "#258475", "top": "0%"});
+                    criaPosicao($('#bloco110'));
+                    $('#bloco21').css({"left": "0%", "background-color": "#784569", "top": "5%"});
+                    criaPosicao($('#bloco21'));
+                    $('#bloco22').css({"left": "10%", "background-color": "#985467", "top": "5%"});
+                    criaPosicao($('#bloco22'));
+                    $('#bloco23').css({"left": "20%", "background-color": "#135248", "top": "5%"});
+                    criaPosicao($('#bloco23'));
+                    $('#bloco24').css({"left": "30%", "background-color": "#487578", "top": "5%"});
+                    criaPosicao($('#bloco24'));
+                    $('#bloco25').css({"left": "40%", "background-color": "#665985", "top": "5%"});
+                    criaPosicao($('#bloco25'));
+                    $('#bloco26').css({"left": "50%", "background-color": "#235255", "top": "5%"});
+                    criaPosicao($('#bloco26'));
+                    $('#bloco27').css({"left": "60%", "background-color": "#203500", "top": "5%"});
+                    criaPosicao($('#bloco27'));
+                    $('#bloco28').css({"left": "70%", "background-color": "#021548", "top": "5%"});
+                    criaPosicao($('#bloco28'));
+                    $('#bloco29').css({"left": "80%", "background-color": "#458545", "top": "5%"});
+                    criaPosicao($('#bloco29'));
+                    $('#bloco210').css({"left": "90%", "background-color": "#521458", "top": "5%"});
+                    criaPosicao($('#bloco210'));
+                    $('#bloco31').css({"left": "0%", "background-color": "#514201", "top": "10%"});
+                    criaPosicao($('#bloco31'));
+                    $('#bloco32').css({"left": "10%", "background-color": "#421521", "top": "10%"});
+                    criaPosicao($('#bloco32'));
+                    $('#bloco33').css({"left": "20%", "background-color": "#102154", "top": "10%"});
+                    criaPosicao($('#bloco33'));
+                    $('#bloco34').css({"left": "30%", "background-color": "#021522", "top": "10%"});
+                    criaPosicao($('#bloco34'));
+                    $('#bloco35').css({"left": "40%", "background-color": "#215365", "top": "10%"});
+                    criaPosicao($('#bloco35'));
+                    $('#bloco36').css({"left": "50%", "background-color": "#124569", "top": "10%"});
+                    criaPosicao($('#bloco36'));
+                    $('#bloco37').css({"left": "60%", "background-color": "#120320", "top": "10%"});
+                    criaPosicao($('#bloco37'));
+                    $('#bloco38').css({"left": "70%", "background-color": "#784596", "top": "10%"});
+                    criaPosicao($('#bloco38'));
+                    $('#bloco39').css({"left": "80%", "background-color": "#458784", "top": "10%"});
+                    criaPosicao($('#bloco39'));
+                    $('#bloco310').css({"left": "90%", "background-color": "#965825", "top": "10%"});
+                    criaPosicao($('#bloco310'));
                 }
+
+                function criaPosicao(valor) {
+                    posicoes.push([valor.position().left, valor.position().left
+                                + valor.width(), valor.position().top,
+                        valor.position().top + valor.height()]);
+                }
+
 
                 var top = -10;
                 var left = 10;
@@ -59,30 +98,30 @@ and open the template in the editor.
                 var bola = $("#bola");
                 var plataforma = $("#plataforma");
                 var blocos = $(".bloco");
-                function movimentaBola(){
+                function movimentaBola() {
                     posiTop += top;
                     posiLetf += left;
                     $('#bola').css("top", posiTop);
                     $('#bola').css("left", posiLetf);
                     //verifica colisão em baixo
-                    if(bola.position().top+bola.height() >= container.height()){
+                    if (bola.position().top + bola.height() >= container.height()) {
                         clearInterval(movimento)
                     }
                     //verifica colisão na borda direita
-                    else if(bola.position().left+bola.width() >= container.width()){
+                    else if (bola.position().left + bola.width() >= container.width()) {
                         left = -10;
                     }
                     //verifica colisão em cima
-                    else if(bola.offset().top <= container.offset().top){
+                    else if (bola.offset().top <= container.offset().top) {
                         top = 10;
                     }
                     //verifica colisão na borda esquerda
-                    else if(bola.offset().left <= container.offset().left){
+                    else if (bola.offset().left <= container.offset().left) {
                         left = 10;
                     }
                     //verifica colisão na plataforma
                     //verifica se a parte de baixo da bola está em contato com a parte de cima da plataforma e se a parte esquerda da bola(o certo seria o meio) está entre a parte esquerda e direita da plataforma
-                    else if ((bola.position().top+bola.height() >= plataforma.position().top) && (bola.position().left >= plataforma.position().left && bola.position().left <= plataforma.position().left + plataforma.width())) {
+                    else if ((bola.position().top + bola.height() >= plataforma.position().top) && (bola.position().left >= plataforma.position().left && bola.position().left <= plataforma.position().left + plataforma.width())) {
                         top = -10;
                     }
 
@@ -106,9 +145,9 @@ and open the template in the editor.
 
                 }
 
-                var movimento = setInterval(movimentaBola, 1);
+                var movimento = setInterval(movimentaBola, 300);
 
-                colorirPosicionarBlocos()
+                colorirPosicionarBlocos();
 
             });
         </script>
