@@ -25,6 +25,7 @@ and open the template in the editor.
 }
 
 #bola{
+    border-radius: 100%;
     background: #112222;
     width: 30px;
     height: 30px;
