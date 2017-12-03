@@ -33,11 +33,6 @@ and open the template in the editor.
                 var esquerdaContainer = container.offset().left;
                 var direitaContainer = container.offset().left + container.width();
 
-                var topoPlataforma = plataforma.offset().top;
-                var baixoPlataforma = plataforma.offset().top + plataforma.height();
-                var esquerdaPlataforma = plataforma.offset().left;
-                var direitaPlataforma = plataforma.offset().left + plataforma.width();
-
                 function movimentaBola(){
                     
                     var larguraBola  = bola.width();
@@ -57,7 +52,7 @@ and open the template in the editor.
                         dY = 1;
                     } else if( esquerdaBola == esquerdaContainer) {
                         dX = 1;
-                    } else if ((baixoBola == topoPlataforma) && (meioBolaX >= esquerdaPlataforma) && (meioBolaX <= direitaPlataforma)) {
+                    } else if ((baixoBola == $("#plataforma").offset().top) && (meioBolaX >= $("#plataforma").offset().left) && (meioBolaX <= $("#plataforma").offset().left + $("#plataforma").width())) {
                         dY = -1;
                     }
 
@@ -130,7 +125,6 @@ and open the template in the editor.
         </script>
     </head>
     <body>
-        <p></p>
         <p></p>
         <div id="container">
             <div id="plataforma"> </div>
