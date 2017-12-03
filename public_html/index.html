@@ -89,21 +89,22 @@ and open the template in the editor.
                     // for (var i = 1; i <= 3; i++) {
                     //     for (var j = 1; j <= 10; j++) {
                     //         var bloco = $("#bloco"+i+""+j);
-                    //         if(bola.position().top <= bloco.position().top + bloco.height()){
+                    //         if(bola.position().top <= bloco.position().top + bloco.height() &&
+                    //             bola.position().top >= bloco.position().left &&
+                    //             bola.position().top <= bloco.position().left + bloco.width()){
                     //             top = 10;
                     //             $("#bloco"+i+""+j).remove();
                     //         }
                     //     }
                     // }
 
-                    // for (var i = 0; i < blocos.length; i++) {
-                    //     var bloco = $(blocos[i]);
-                    //     if(bola.position().top <= bloco.position().top + bloco.height()){
-                    //         top = 10;
-                    //         bloco.remove();
-                    //     }
-                    // }
-
+                    for (var i = 0; i < blocos.length; i++) {
+                        var bloco = $(blocos[i]);
+                        if((bola.position().top <= bloco.height() + bloco.position().top) && (bola.position().left >= bloco.position().left) && (bola.position().left <= bloco.width() + bloco.position().left)) {
+                                top = 10;
+                                bloco.remove();
+                        }
+                    }
                 }
 
                 var movimento = setInterval(movimentaBola, 1);
