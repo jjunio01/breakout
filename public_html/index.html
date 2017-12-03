@@ -148,12 +148,14 @@ and open the template in the editor.
                     //     }
                     // }
                     //&& (bola.position().left + (bola.position().width)) <= posicoes[i][1]
+                    var margem = 2;
                     for (var i = 0; i < posicoes.length; i++) {
                         bolaAux = $('#bola');
-                        if ((bolaAux.position().top + bolaAux.height() >= aux2[i].position().top)
-                                && (bolaAux.position().left >= aux2[i].position().left
-                                        && bolaAux.position().left <= aux2[i].position().left + aux2[i].width())) {
+                        if (((bolaAux.position().top > aux2[i].height()))
+                                && (((bolaAux.position().left > aux2[i].position().left))
+                                        && (bolaAux.position().left < aux2[i].position().left + aux2[i].width()))) {
                             destruirBloco(i);
+                            //top = -10;
                         }
                     }
 
