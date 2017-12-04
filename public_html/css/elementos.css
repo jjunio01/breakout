@@ -11,7 +11,7 @@ and open the template in the editor.
     width: 700px;
     height: 400px;
     left: 150px;
-    top: 100px;
+    top: 50px;
     background-color: #eeeeee;
     position: relative;
 }
@@ -30,7 +30,7 @@ and open the template in the editor.
     width: 30px;
     height: 30px;
     left: 350px;
-    top: 200px;
+    top: 330px;
     position: absolute;
 }
 
