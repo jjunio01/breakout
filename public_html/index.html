@@ -20,7 +20,7 @@ and open the template in the editor.
                 var x = $("#bola").position().left;
                 var y = $("#bola").position().top;
 
-                var dY = -1;
+                var dY = 1;
                 var dX = 1;
 
                 var container = $("#container");
@@ -45,7 +45,7 @@ and open the template in the editor.
                     var meioBolaY = topoBola + alturaBola/2;
                     
                     if (baixoBola == baixoContainer) {
-                        dY = -1;
+                        clearInterval(moviemnto);
                     } else if (direitaBola == direitaContainer) {
                         dX = -1;
                     } else if (topoBola == topoContainer) {
