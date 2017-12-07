@@ -46,16 +46,32 @@ $(function(){
             var baixoBloco = bloco.offset().top + bloco.height();
             var esquerdaBloco = bloco.offset().left;
             var direitaBloco = bloco.offset().left + bloco.width();
-            if ((topoBola == baixoBloco) && (meioBolaX >= esquerdaBloco) && (meioBolaX <= direitaBloco)) {
+            if (
+                (topoBola == baixoBloco) &&
+                (((esquerdaBola >= esquerdaBloco) && (esquerdaBola <= direitaBloco)) ||
+                ((direitaBola >= esquerdaBloco) && (direitaBola <= direitaBloco)))
+                ) {
                 dY = 1;
                 bloco.remove();
-            } else if ((direitaBola == esquerdaBloco) && (meioBolaY >= topoBloco) && (meioBolaY <= baixoBloco)) {
+            } else if (
+                (direitaBola == esquerdaBloco) && 
+                (((topoBola >= topoBloco) && (topoBola <= baixoBloco)) || 
+                ((baixoBola >= topoBloco) && (baixoBola <= baixoBloco)))
+                ) {
                 dX = -1;
                 bloco.remove();
-            } else if((esquerdaBola == direitaBloco) && (meioBolaY >= topoBloco) && (meioBolaY <= baixoBloco)) {
+            } else if(
+                (esquerdaBola == direitaBloco) && 
+                (((topoBola >= topoBloco) && (topoBola <= baixoBloco)) || 
+                ((baixoBola >= topoBloco) && (baixoBola <= baixoBloco)))
+                ) {
                 dX = 1;
                 bloco.remove();
-            } else if((baixoBola == topoBloco) && (meioBolaX >= esquerdaBloco) && (meioBolaX <= direitaBloco)) {
+            } else if (
+                (baixoBola == topoBloco) &&
+                (((esquerdaBola >= esquerdaBloco) && (esquerdaBola <= direitaBloco)) ||
+                ((direitaBola >= esquerdaBloco) && (direitaBola <= direitaBloco)))
+                ) {
                 dy = -1;
                 bloco.remove();
             }
@@ -101,7 +117,7 @@ $(function(){
         $('#bloco310').css({"left":"90%", "background-color":"#965825", "top":"10%"});
     }
 
-    var movimento = setInterval(movimentaBola, 10);
+    var movimento = setInterval(movimentaBola, 1);
 
     colorirPosicionarBlocos()
 });
